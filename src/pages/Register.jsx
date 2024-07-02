@@ -18,7 +18,7 @@ function Register() {
   const { register, isPending } = useRegister();
   useEffect(() => {
     if (userData) {
-      register(userData);
+      register(userData.email, userData.password, userData.displayName, userData.photoURL);
     }
   }, [userData]);
 
